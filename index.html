@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Column Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Navigation Menu Stripe */
+        nav {
+            background-color: #34495e;
+            padding: 0.5rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 0;
+        }
+
+        nav li {
+            flex: 1;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            border-right: 1px solid #2c3e50;
+        }
+
+        nav a:hover {
+            background-color: #2c3e50;
+        }
+
+        nav li:last-child a {
+            border-right: none;
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+            min-height: calc(100vh - 200px);
+        }
+
+        /* Three Column Layout */
+        .column {
+            flex: 1;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .column h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .column p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .column ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .column li {
+            margin-bottom: 5px;
+        }
+
+        /* Different background colors for columns */
+        .column:nth-child(1) {
+            background-color: #e8f4f8;
+        }
+
+        .column:nth-child(2) {
+            background-color: #f0f8e8;
+        }
+
+        .column:nth-child(3) {
+            background-color: #f8f0e8;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-links {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav a {
+                border-right: none;
+                border-bottom: 1px solid #2c3e50;
+            }
+
+            nav li:last-child a {
+                border-bottom: none;
+            }
+
+            .logo {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <div class="logo">Your Website</div>
+        </div>
+        
+        <!-- Navigation Menu Stripe -->
+        <nav>
+            <div class="nav-container">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content with Three Columns -->
+    <div class="container">
+        <!-- Column 1 -->
+        <div class="column">
+            <h2>Welcome</h2>
+            <p>Welcome to our website! This is the first column of our three-column layout. Here you can introduce your visitors to what your website is all about.</p>
+            <p>This column could be used for:</p>
+            <ul>
+                <li>Introduction content</li>
+                <li>Latest news or updates</li>
+                <li>Featured content</li>
+                <li>Call-to-action buttons</li>
+            </ul>
+            <p>The responsive design ensures that your content looks great on all devices, from desktop computers to mobile phones.</p>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="column">
+            <h2>Our Services</h2>
+            <p>This is the second column where you can showcase your services, products, or main content. The middle column often serves as the primary content area.</p>
+            <p>Key features of this layout:</p>
+            <ul>
+                <li>Responsive three-column design</li>
+                <li>Sticky navigation header</li>
+                <li>Clean and modern styling</li>
+                <li>Mobile-friendly layout</li>
+            </ul>
+            <p>You can easily customize the colors, fonts, and spacing to match your brand identity and design preferences.</p>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="column">
+            <h2>Contact Info</h2>
+            <p>The third column is perfect for additional information, contact details, or supplementary content that supports your main message.</p>
+            <p>This column could include:</p>
+            <ul>
+                <li>Contact information</li>
+                <li>Social media links</li>
+                <li>Recent blog posts</li>
+                <li>Testimonials</li>
+                <li>Quick links</li>
+            </ul>
+            <p>The layout automatically adapts to smaller screens by stacking the columns vertically on mobile devices.</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#support">Support</a>
+                <a href="#sitemap">Sitemap</a>
+            </div>
+            <p>&copy; 2024 Your Website. All rights reserved.</p>
+            <p>Designed with a modern three-column layout</p>
+        </div>
+    </footer>
+</body>
+</html>
